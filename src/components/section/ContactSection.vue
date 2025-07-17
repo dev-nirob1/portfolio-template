@@ -4,6 +4,7 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 import BaseTextArea from '../Elements/BaseTextArea.vue';
 import BaseTitle from '../Elements/BaseTitle.vue';
 import InputField from '../Elements/InputField.vue';
+import ListItem from '../Elements/ListItem.vue';
 import SubTitle from '../Elements/SubTitle.vue';
 
 
@@ -19,27 +20,27 @@ import SubTitle from '../Elements/SubTitle.vue';
           <SubTitle>Let's Discuss</SubTitle>
           <BaseParagraph>Have a question or want to discuss a project? Feel free to contact me using the information below:</BaseParagraph>
           <ul>
-            <li>
+            <ListItem>
              <i class="fa-solid fa-envelope fa-3x"></i>
               <div>
                 <SubTitle>Email</SubTitle>
               <BaseParagraph>hello@yourportfolio.com</BaseParagraph>
               </div>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
              <i class="fa-solid fa-phone fa-3x"></i>
               <div>
                 <SubTitle>Phone</SubTitle>
               <BaseParagraph>+1 (555) 123-4567</BaseParagraph>
               </div>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
              <i class="fa-solid fa-location-dot fa-3x"></i>
               <div>
                 <SubTitle>Address</SubTitle>
               <BaseParagraph>Creative District, Suite 456</BaseParagraph>
               </div>
-            </li>
+            </ListItem>
           </ul>
         </div>
 
@@ -100,6 +101,7 @@ textarea {
   padding: 1rem;
   margin: 0;
   border: 1px solid var(--alternative-color);
+  border-radius: .5rem;
   color: var(--alternative-color);
   box-shadow: var(--box-shadow);
   margin-top: 1rem;

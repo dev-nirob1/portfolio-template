@@ -23,6 +23,7 @@
   justify-content: center;
   position: relative;
   color: #C5C6C7;
+  padding: 5rem 0;
 }
 
 .overlay {

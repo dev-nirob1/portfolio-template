@@ -17,7 +17,7 @@ const skills = [
 <template>
   <section id="skills" class="skills">
     <div class="container">
-      <BaseTitle class="text-center mb-2 text-secondary">My Skills & Tools</BaseTitle>
+      <BaseTitle class="text-center mb-1 text-secondary">My Skills & Tools</BaseTitle>
       <BaseParagraph class="text-center">
         I specialize in crafting responsive web applications using modern frontend frameworks like <strong>React</strong> and <strong>Vue</strong>. My experience also includes tools like <strong>Firebase</strong>, <strong>Node.js</strong>, and <strong>Git</strong> for full-stack development and collaboration.
       </BaseParagraph>
