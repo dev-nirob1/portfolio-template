@@ -1,109 +1,68 @@
+<script setup>
+import BaseButton from '../Elements/BaseButton.vue';
+import BaseTextArea from '../Elements/BaseTextArea.vue';
+import InputField from '../Elements/InputField.vue';
+
+
+</script>
+
 <template>
-  <section class="contact" id="contact">
+  <section class="form">
     <div class="container">
-      <h2>Contact Me</h2>
-      <form @submit.prevent="handleSubmit" class="contact-form">
-        <input v-model="name" type="text" placeholder="Your Name" required />
-        <input v-model="email" type="email" placeholder="Your Email" required />
-        <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+      <form>
+          <div>
+            <label for="name"></label>
+            <InputField id="name" type="text" placeholder="Enter Your Name" />
+          </div>
+          <div>
+            <label for="email"></label>
+            <InputField id="email" type="email" placeholder="Enter Your Email" />
+          </div>
+          <div>
+            <label for="phone"></label>
+            <InputField type="tel" id="phone" placeholder="Enter Your Phone Number" />
+          </div>
+        <div class="mt-1">
+          <label for="message"></label>
+          <BaseTextArea rows="6" id="message" placeholder="Enter Message..."></BaseTextArea>
+        </div>
+        <BaseButton class="bg-secondary">GET A FREE SERVICE</BaseButton>
       </form>
-      <div class="socials">
-        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">🐙 GitHub</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">💼 LinkedIn</a>
-        <a href="mailto:youremail@example.com" aria-label="Email">📧 Email</a>
-      </div>
     </div>
   </section>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const name = ref('')
-const email = ref('')
-const message = ref('')
-
-const handleSubmit = () => {
-  alert(`Thank you, ${name.value}! Your message has been sent.`)
-  name.value = ''
-  email.value = ''
-  message.value = ''
-}
-</script>
-
 <style scoped>
-.contact {
-  background-color: #1F2833;
-  color: #C5C6C7;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.container {
-  max-width: 600px;
-  margin: auto;
-}
-
-h2 {
-  color: #66FCF1;
-  margin-bottom: 2rem;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.form {
+  padding: 3.75rem 0;
+  background-color: var(--primary-color);
 }
 
 input,
+select,
 textarea {
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #0B0C10;
-  color: #C5C6C7;
-  resize: vertical;
-  transition: border 0.3s ease;
+  padding: 1.25rem;
+  margin: 0;
+  border: 1px solid var(--alternative-color);
+  box-shadow: var(--box-shadow);
+  margin-top: 1rem;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
-  border: 2px solid #66FCF1;
 }
 
-.btn {
-  padding: 0.75rem;
-  background-color: #66FCF1;
-  color: #1F2833;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-size: .9rem;
+  color: var(--alternative-color);
 }
 
-.btn:hover {
-  background-color: #45d5cb;
+.form .btn {
+  padding: 1.25rem 2rem;
+  margin: 1rem 0 0 0;
 }
 
-.socials {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 1.25rem;
-}
-
-.socials a {
-  color: #66FCF1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.socials a:hover {
-  color: #45d5cb;
-}
 </style>

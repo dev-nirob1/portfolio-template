@@ -54,11 +54,11 @@ import ListItem from '../Elements/ListItem.vue';
 }
 .about ul li {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
   margin-bottom: .25rem;
 }
 .about ul li::before {
-  content: "✓";
+  content: "→";
   position: absolute;
   left: 0;
   color: var(--secondary-color);

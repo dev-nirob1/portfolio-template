@@ -2,10 +2,21 @@
   <section class="skills">
     <div class="container">
       <h2>My Skills & Tools</h2>
-      <div class="grid">
-        <div v-for="skill in skills" :key="skill.name" class="skill">
-          <img :src="skill.icon" :alt="skill.name" />
-          <p>{{ skill.name }}</p>
+      <p class="description">
+        I specialize in crafting responsive web applications using modern frontend frameworks like <strong>React</strong> and <strong>Vue</strong>. My experience also includes tools like <strong>Firebase</strong>, <strong>Node.js</strong>, and <strong>Git</strong> for full-stack development and collaboration.
+      </p>
+
+      <div class="marquee">
+        <div class="marquee-content">
+          <div v-for="skill in skills" :key="skill.name" class="skill">
+            <img :src="skill.icon" :alt="skill.name" />
+            <p>{{ skill.name }}</p>
+          </div>
+          <!-- Repeat for seamless scroll -->
+          <div v-for="skill in skills" :key="`${skill.name}-clone`" class="skill">
+            <img :src="skill.icon" :alt="skill.name" />
+            <p>{{ skill.name }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -34,22 +45,37 @@ const skills = [
   text-align: center;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
 h2 {
   color: #66FCF1;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem;
+.description {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: #C5C6C7;
+  line-height: 1.6;
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  gap: 3rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
+  min-width: 100px;
 }
 
 .skill img {
@@ -66,7 +92,17 @@ h2 {
 
 .skill p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
+  color: #C5C6C7;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 </style>
