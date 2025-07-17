@@ -1,5 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import BaseButton from '../Elements/BaseButton.vue';
+import ListItem from '../Elements/ListItem.vue';
 
 const isMenuOpen = ref(false)
 
@@ -34,10 +36,7 @@ onMounted(() => {
      
       <!-- Logo -->
       <a href="/" class="logo">
-        <div class="logo-icon">
-          <i class="fa-solid fa-map-location-dot"></i>
-        </div>
-        <span class="logo-text">Ghor<span>Bari</span></span>
+        <span class="logo-text">Tech<span>Bondhu</span></span>
       </a>
       <!-- Navigation Links -->
       <ul :class="{ 'active': isMenuOpen }">
@@ -45,20 +44,20 @@ onMounted(() => {
           <a href="#">Home</a>
         </ListItem>
         <ListItem>
-          <a href="#featured">Featured</a>
+          <a href="#about">About</a>
         </ListItem>
         <ListItem>
-          <a href="#cities">Explore Cities</a>
+          <a href="#skills">Skills</a>
         </ListItem>
         <ListItem>
-          <a href="#properties">Properties</a>
+          <a href="#projects">Projects</a>
         </ListItem>
         <ListItem>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
         </ListItem>
 
         <ListItem>
-          <BaseButton class="bg-alternative">List Your Property</BaseButton>
+          <BaseButton class="bg-alternative"><i class="fa-brands fa-github fa-2xl"></i> Github</BaseButton>
         </ListItem>
       </ul>
  <!-- Mobile Menu Toggle Button -->
@@ -102,11 +101,11 @@ onMounted(() => {
 .logo-icon {
   width: 32px;
   height: 32px;
-  color: var(--alternative-color);
+  color: var(--secondary-color);
 }
 
 .logo-text span {
-  color: var(--alternative-color);
+  color: var(--secondary-color);
 }
 
 .navbar a {
@@ -148,9 +147,10 @@ onMounted(() => {
 }
 
 .navbar .btn {
-  border-radius: .75rem 0 .75rem 0;
   color: var(--primary-color);
-  white-space: nowrap
+  background-color: var(--secondary-color);
+  white-space: nowrap;
+  margin: 0;
 }
 
 /* Mobile menu toggle */
@@ -181,6 +181,7 @@ onMounted(() => {
     width: 100%;
     flex-direction: row;
     justify-content: end;
+    align-items: center;
     background-color: transparent;
     padding: 0.75rem 0;
   }
@@ -193,7 +194,7 @@ onMounted(() => {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--alternative-color);
+    background: var(--secondary-color);
     transition: width 0.3s ease;
   }
 

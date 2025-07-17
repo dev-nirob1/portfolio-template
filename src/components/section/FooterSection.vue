@@ -35,11 +35,10 @@
   gap: 1.5rem;
 }
 .socials a {
-  color: #66FCF1;
+  color: var(--secondary-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .socials a:hover {
   color: #45d5cb;
 }

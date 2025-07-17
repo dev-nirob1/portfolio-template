@@ -8,7 +8,7 @@ import ListItem from '../Elements/ListItem.vue';
 </script>
 
 <template>
-  <section class="about bg-primary">
+  <section id="about" class="about bg-primary">
     <div class="container medium-2 gap-2 align-center">
               <!-- about us content  -->
       <div>

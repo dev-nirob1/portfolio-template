@@ -1,10 +1,26 @@
+<script setup>
+import BaseParagraph from '../Elements/BaseParagraph.vue';
+import BaseTitle from '../Elements/BaseTitle.vue';
+
+const skills = [
+  { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+  { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'Vue', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
+  { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+  { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg' },
+]
+</script>
 <template>
-  <section class="skills">
+  <section id="skills" class="skills">
     <div class="container">
-      <h2>My Skills & Tools</h2>
-      <p class="description">
+      <BaseTitle class="text-center mb-2 text-secondary">My Skills & Tools</BaseTitle>
+      <BaseParagraph class="text-center">
         I specialize in crafting responsive web applications using modern frontend frameworks like <strong>React</strong> and <strong>Vue</strong>. My experience also includes tools like <strong>Firebase</strong>, <strong>Node.js</strong>, and <strong>Git</strong> for full-stack development and collaboration.
-      </p>
+      </BaseParagraph>
 
       <div class="marquee">
         <div class="marquee-content">
@@ -23,20 +39,6 @@
   </section>
 </template>
 
-<script setup>
-const skills = [
-  { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-  { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Vue', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
-  { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
-  { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg' },
-]
-</script>
-
 <style scoped>
 .skills {
   background-color: #1F2833;
@@ -45,17 +47,9 @@ const skills = [
   text-align: center;
 }
 
-h2 {
-  color: #66FCF1;
-  margin-bottom: 1rem;
-}
-
-.description {
-  font-size: 1rem;
+.skills p {
   max-width: 700px;
   margin: 0 auto 2.5rem;
-  color: #C5C6C7;
-  line-height: 1.6;
 }
 
 .marquee {

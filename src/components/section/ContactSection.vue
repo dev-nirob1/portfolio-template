@@ -10,7 +10,7 @@ import SubTitle from '../Elements/SubTitle.vue';
 </script>
 
 <template>
-  <section class="contact">
+  <section id="contact" class="contact">
     <div class="container">
       <BaseTitle class="text-center mb-2 text-secondary">Contact Me</BaseTitle>
       <div class="medium-2 gap-2">
