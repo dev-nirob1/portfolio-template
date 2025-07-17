@@ -31,10 +31,7 @@ onMounted(() => {
   <!-- ======== Navbar section ======== -->
   <header class="navbar">
     <nav class="flex justify-between align-center gap-1 container">
-      <!-- Mobile Menu Toggle Button -->
-      <BaseButton class="hamburger" @click="toggleMenu">
-        <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
-      </BaseButton>
+     
       <!-- Logo -->
       <a href="/" class="logo">
         <div class="logo-icon">
@@ -60,12 +57,14 @@ onMounted(() => {
           <a href="#testimonials">Testimonials</a>
         </ListItem>
 
-        <ListItem class="btn-mobile">
+        <ListItem>
           <BaseButton class="bg-alternative">List Your Property</BaseButton>
         </ListItem>
       </ul>
-      <!-- Button to start property listing process -->
-      <BaseButton class="btn-desktop bg-alternative">List Your Property</BaseButton>
+ <!-- Mobile Menu Toggle Button -->
+      <BaseButton class="hamburger" @click="toggleMenu">
+        <i :class="isMenuOpen ? 'fas fa-xmark' : 'fas fa-bars'" class="fa-2xl"></i>
+      </BaseButton>
     </nav>
   </header>
 </template>
@@ -78,7 +77,8 @@ onMounted(() => {
 }
 
 .navbar {
-  backdrop-filter: blur(50px);
+  /* backdrop-filter: blur(50px); */
+  background: rgb(from var(--primary-color)r g b / 20%);
   color: var(--white-color);
   box-shadow: var(--box-shadow);
   padding: 0.75rem 0;
@@ -169,7 +169,6 @@ onMounted(() => {
 /* cta button hidden/vissible */
 .btn-desktop {
   display: none;
-  white-space: nowrap;
 }
 
 .btn-mobile {
@@ -181,7 +180,7 @@ onMounted(() => {
     position: inherit;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     background-color: transparent;
     padding: 0.75rem 0;
   }

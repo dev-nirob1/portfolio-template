@@ -6,7 +6,7 @@
         <p class="tagline">Front-End Developer specializing in React & Vue</p>
         <div class="buttons">
           <a href="#contact" class="btn">Contact Me</a>
-          <a href="/resume.pdf" class="btn outline" download>Download CV</a>
+          <a href="#" class="btn outline" download>Download CV</a>
         </div>
       </div>
     </div>

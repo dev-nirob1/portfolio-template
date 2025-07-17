@@ -1,76 +1,70 @@
+<script setup>
+import BaseImage from '../Elements/BaseImage.vue';
+import BaseParagraph from '../Elements/BaseParagraph.vue';
+import BaseTitle from '../Elements/BaseTitle.vue';
+import ListItem from '../Elements/ListItem.vue';
+
+
+</script>
+
 <template>
-  <section class="about">
-    <div class="container">
-      <div class="image">
-        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328a3bb2?auto=format&fit=crop&w=800&q=80" alt="Nirob's Photo" />
-      </div>
-      <div class="info">
-        <h2>About Me</h2>
-        <p>
+  <section class="about bg-primary">
+    <div class="container medium-2 gap-2 align-center">
+              <!-- about us content  -->
+      <div>
+       <BaseTitle class="text-secondary">About Me</BaseTitle>
+        <BaseParagraph>
           I'm <span class="highlight">MD AL HASAN NIROB</span>, a passionate front-end developer with expertise in
           <strong>React.js</strong>, <strong>Vue.js</strong>, and modern web tools. I build beautiful, responsive, and fast websites that solve real-world problems.
-        </p>
+        </BaseParagraph>
         <ul class="highlights">
-          <li>💡 Creative problem solver</li>
-          <li>🚀 Focused on performance & UX</li>
-          <li>🛠 Skilled in Firebase, Git, and APIs</li>
-          <li>📚 Always learning & improving</li>
+          <ListItem>Creative problem solver</ListItem>
+          <ListItem>Focused on performance & UX</ListItem>
+          <ListItem>Skilled in Firebase, Git, and APIs</ListItem>
+          <ListItem>Always learning & improving</ListItem>
         </ul>
       </div>
+      <!-- img container  -->
+      <div class="about-image">
+        <BaseImage image="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1650&q=80" alt="image" />
+      </div>
+
+
     </div>
   </section>
 </template>
 
 <style scoped>
 .about {
-  padding: 4rem 2rem;
-  background-color: #1F2833;
-  color: #C5C6C7;
+  padding: 3.75rem 0;
+  color: var(--alternative-color);
 }
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+.about-image {
+  height: 100%;
+  width: 100%;
 }
-
-.image {
-  flex: 1 1 300px;
-  text-align: center;
+.about-image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
-
-.image img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+.about ul {
+    list-style: none;
+    padding: 0;
 }
-
-.info {
-  flex: 1 1 500px;
+.about ul li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: .25rem;
 }
-
-h2 {
-  color: #66FCF1;
-  margin-bottom: 1rem;
+.about ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
 }
-
-.highlight {
-  color: #66FCF1;
-  font-weight: bold;
-}
-
-.highlights {
-  margin-top: 1.5rem;
-  list-style: none;
-  padding: 0;
-}
-
-.highlights li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
+.about .highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 </style>
