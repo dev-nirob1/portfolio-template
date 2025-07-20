@@ -17,8 +17,8 @@ const skills = [
 <template>
   <section id="skills" class="skills">
     <div class="container">
-      <BaseTitle class="text-center mb-1 text-secondary">My Skills & Tools</BaseTitle>
-      <BaseParagraph class="text-center">
+      <BaseTitle class="mb-1 text-secondary">My Skills & Tools</BaseTitle>
+      <BaseParagraph>
         I specialize in crafting responsive web applications using modern frontend frameworks like <strong>React</strong> and <strong>Vue</strong>. My experience also includes tools like <strong>Firebase</strong>, <strong>Node.js</strong>, and <strong>Git</strong> for full-stack development and collaboration.
       </BaseParagraph>
 
@@ -41,14 +41,12 @@ const skills = [
 
 <style scoped>
 .skills {
-  background-color: #1F2833;
-  color: #C5C6C7;
-  padding: 4rem 2rem;
+  padding: 3.75rem 0;
   text-align: center;
 }
 
 .skills p {
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto 2.5rem;
 }
 
@@ -57,14 +55,12 @@ const skills = [
   position: relative;
   width: 100%;
 }
-
 .marquee-content {
   display: flex;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
   gap: 3rem;
 }
-
 .skill {
   display: flex;
   flex-direction: column;
@@ -83,12 +79,9 @@ const skills = [
 .skill img:hover {
   transform: scale(1.2);
 }
-
 .skill p {
-  margin: 0;
   font-size: 0.85rem;
-  font-weight: bold;
-  color: #C5C6C7;
+  font-weight: 700;
 }
 
 @keyframes scroll {
@@ -98,5 +91,11 @@ const skills = [
   100% {
     transform: translateX(-50%);
   }
+}
+
+@media (min-width:768px){
+  .skills p {
+  max-width: 700px;
+}
 }
 </style>

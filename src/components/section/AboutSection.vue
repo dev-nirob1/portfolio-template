@@ -4,11 +4,10 @@ import BaseParagraph from '../Elements/BaseParagraph.vue';
 import BaseTitle from '../Elements/BaseTitle.vue';
 import ListItem from '../Elements/ListItem.vue';
 
-
 </script>
 
 <template>
-  <section id="about" class="about bg-primary">
+  <section id="about" class="about">
     <div class="container medium-2 gap-2 align-center">
               <!-- about us content  -->
       <div>

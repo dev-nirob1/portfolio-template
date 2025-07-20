@@ -56,8 +56,6 @@ import HeroTitle from './../Elements/HeroTitle.vue'
   padding: 0.75rem 1.5rem;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  border-radius: .25rem;
-  font-weight: bold;
   transition: background 0.3s ease;
   border: 2px solid var(--secondary-color);
 }
