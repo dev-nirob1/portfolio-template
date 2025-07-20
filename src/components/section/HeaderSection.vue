@@ -76,7 +76,6 @@ onMounted(() => {
 }
 
 .navbar {
-  /* backdrop-filter: blur(50px); */
   background: rgb(from var(--primary-color)r g b / 20%);
   color: var(--white-color);
   box-shadow: var(--box-shadow);
@@ -120,7 +119,7 @@ onMounted(() => {
 .navbar ul {
   list-style: none;
   position: fixed;
-  top: 5.25rem;
+  top: 4rem;
   left: -100%;
   width: 80%;
   margin: 0;
@@ -133,9 +132,8 @@ onMounted(() => {
 }
 
 .navbar ul.active {
-  top: 5.25rem;
+  top: 4rem;
   left: 0;
-  color: var(--white-color);
 }
 
 .navbar ul li a {
@@ -149,10 +147,12 @@ onMounted(() => {
 .navbar .btn {
   color: var(--primary-color);
   background-color: var(--secondary-color);
-  white-space: nowrap;
   margin: 0;
 }
-
+.navbar .btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
 /* Mobile menu toggle */
 .hamburger {
   display: block;
@@ -164,16 +164,10 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent !important;
+  border: 2px solid var(--white-color);
 }
 
-/* cta button hidden/vissible */
-.btn-desktop {
-  display: none;
-}
-
-.btn-mobile {
-  display: block;
-}
 
 @media (min-width: 992px) {
   .navbar ul {
@@ -204,15 +198,6 @@ onMounted(() => {
 
   /* expand navlinks on desktop  */
   .hamburger {
-    display: none;
-  }
-
-  /* cta button hidden/vissible */
-  .btn-desktop {
-    display: block;
-  }
-
-  .btn-mobile {
     display: none;
   }
 }

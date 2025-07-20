@@ -92,7 +92,6 @@ const projects = [
 .projects .btn.outline {
   background: transparent;
   color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
 }
 
 .projects .btn.outline:hover {

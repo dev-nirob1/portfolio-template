@@ -17,27 +17,28 @@ import SubTitle from '../Elements/SubTitle.vue';
       <div class="medium-2 gap-2">
         <div class="contact-info">
           <SubTitle>Let's Discuss</SubTitle>
-          <BaseParagraph>Have a question or want to discuss a project? Feel free to contact me using the information below:</BaseParagraph>
+          <BaseParagraph>Have a question or want to discuss a project? Feel free to contact me using the information
+            below:</BaseParagraph>
           <ul>
             <ListItem>
-             <i class="fa-solid fa-envelope"></i>
+              <i class="fa-solid fa-envelope"></i>
               <div>
                 <SubTitle>Email</SubTitle>
-              <BaseParagraph>hello@yourportfolio.com</BaseParagraph>
+                <BaseParagraph>hello@yourportfolio.com</BaseParagraph>
               </div>
             </ListItem>
             <ListItem>
-             <i class="fa-solid fa-phone"></i>
+              <i class="fa-solid fa-phone"></i>
               <div>
                 <SubTitle>Phone</SubTitle>
-              <BaseParagraph>+1 (555) 123-4567</BaseParagraph>
+                <BaseParagraph>+1 (555) 123-4567</BaseParagraph>
               </div>
             </ListItem>
             <ListItem>
-             <i class="fa-solid fa-location-dot"></i>
+              <i class="fa-solid fa-location-dot"></i>
               <div>
                 <SubTitle>Address</SubTitle>
-              <BaseParagraph>Creative District, Suite 456</BaseParagraph>
+                <BaseParagraph>Creative District, Suite 456</BaseParagraph>
               </div>
             </ListItem>
           </ul>
@@ -75,33 +76,36 @@ import SubTitle from '../Elements/SubTitle.vue';
 .contact {
   padding: 3.75rem 0;
 }
+
 .contact ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.contact ul i{
+
+.contact ul i {
   font-size: 2.5rem;
   color: var(--secondary-color);
 }
+
 .contact ul li {
   display: flex;
   align-items: start;
   gap: 1rem;
   margin-top: 2rem;
 }
-.contact ul li p{
- margin: 0;
+
+.contact ul li p {
+  margin: 0;
 }
+
 input,
 select,
 textarea {
   padding: 1rem;
-  margin: 0;
   border: 1px solid var(--alternative-color);
-  border-radius: .5rem;
+  border-radius: .25rem;
   color: var(--alternative-color);
-  margin-top: 1.1rem;
 }
 
 input:focus,
@@ -119,5 +123,11 @@ select::placeholder {
 .form .btn {
   padding: 1.25rem 2rem;
   margin-top: 1rem;
+  
+}
+
+.form .btn:hover {
+  background-color: transparent;
+  color: var(--secondary-color);
 }
 </style>

@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="flex justify-between align-center">
-        <p>© 2025 All rights reserved.</p>
+        <p>© 2025 Tech<span>Bondhu</span>. All rights reserved.</p>
       <div class="socials">
         <a href="https://github.com/" target="_blank">
           <i class="fa-brands fa-github fa-2x"></i>
@@ -22,25 +22,27 @@
 
 <style scoped>
 .footer {
-  background-color: rgb(from var(--primary-color)r g b / 95%);
-  color: var(--alternative-color);
+  border-top: 1px solid var(--alternative-color);
   padding: 1rem;
   text-align: center;
+}
+.footer p span{
+  color: var(--secondary-color);
 }
 .footer .flex {
   flex-direction: column;
 }
-.socials {
+.footer .socials {
   display: flex;
   gap: 1.5rem;
 }
-.socials a {
+.footer .socials a {
   color: var(--secondary-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
-.socials a:hover {
-  color: #45d5cb;
+.footer .socials a:hover{
+  scale: 1.05;
 }
 @media (min-width: 768px){
   .footer .flex {

@@ -14,7 +14,6 @@ html {
   --secondary-color: #66FCF1;
   --alternative-color: #C5C6C7;
   --white-color: #fff;
-  --border-color: #dee2e6;
   /* ---------------typography------------ */
   /* headings  */
   --heading-1: 1.5rem;
@@ -22,9 +21,6 @@ html {
   --heading-3: 1.25rem;
   --heading-4: 1.125rem;
 
-  /* box shadows  */
-  --testimonials-card-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.293);
-  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.109);
 }
 
 body {
@@ -90,40 +86,12 @@ a {
   color: inherit;
 }
 
-/* color pallate  */
-.text-primary {
-  color: var(--primary-color);
-}
-.text-secondary {
-  color: var(--secondary-color);
-}
-.text-white {
-  color: var(--white-color);
-}
-
-.bg-light {
-  background-color: rgb(from var(--primary-color) r g b/ 5%);
-  /* background-color: #d4ebff; */
-}
-.bg-primary {
-  background-color: var(--primary-color);
-}
 .bg-secondary {
   background-color: var(--secondary-color);
 }
-.bg-alternative {
-  background-color: var(--alternative-color);
-}
 
-.bg-white {
-  background-color: var(--white-color);
-}
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 /* flex  */
@@ -133,10 +101,6 @@ a {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.flex-col {
-  flex-direction: column;
 }
 
 .align-center {
@@ -151,15 +115,11 @@ a {
   justify-content: center;
 }
 
-.justify-end {
-  justify-content: end;
-}
-
 /* button styles  */
 .btn {
   display: inline-block;
   text-decoration: none;
-  border: none;
+  border: 2px solid var(--secondary-color);
   outline: none;
   font-weight: 600;
   border-radius: 4px;

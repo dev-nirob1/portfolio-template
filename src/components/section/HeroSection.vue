@@ -57,7 +57,6 @@ import HeroTitle from './../Elements/HeroTitle.vue'
   background-color: var(--secondary-color);
   color: var(--primary-color);
   transition: background 0.3s ease;
-  border: 2px solid var(--secondary-color);
 }
 
 .hero .btn:hover {
