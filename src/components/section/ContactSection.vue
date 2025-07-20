@@ -13,29 +13,28 @@ import SubTitle from '../Elements/SubTitle.vue';
 <template>
   <section id="contact" class="contact">
     <div class="container">
-      <BaseTitle class="text-center mb-2 text-secondary">Contact Me</BaseTitle>
+      <BaseTitle class="mb-2 text-secondary">Contact Me</BaseTitle>
       <div class="medium-2 gap-2">
-
         <div class="contact-info">
           <SubTitle>Let's Discuss</SubTitle>
           <BaseParagraph>Have a question or want to discuss a project? Feel free to contact me using the information below:</BaseParagraph>
           <ul>
             <ListItem>
-             <i class="fa-solid fa-envelope fa-3x"></i>
+             <i class="fa-solid fa-envelope"></i>
               <div>
                 <SubTitle>Email</SubTitle>
               <BaseParagraph>hello@yourportfolio.com</BaseParagraph>
               </div>
             </ListItem>
             <ListItem>
-             <i class="fa-solid fa-phone fa-3x"></i>
+             <i class="fa-solid fa-phone"></i>
               <div>
                 <SubTitle>Phone</SubTitle>
               <BaseParagraph>+1 (555) 123-4567</BaseParagraph>
               </div>
             </ListItem>
             <ListItem>
-             <i class="fa-solid fa-location-dot fa-3x"></i>
+             <i class="fa-solid fa-location-dot"></i>
               <div>
                 <SubTitle>Address</SubTitle>
               <BaseParagraph>Creative District, Suite 456</BaseParagraph>
@@ -75,8 +74,6 @@ import SubTitle from '../Elements/SubTitle.vue';
 <style scoped>
 .contact {
   padding: 3.75rem 0;
-  background-color: var(--primary-color);
-  color: var(--alternative-color);
 }
 .contact ul {
   padding: 0;
@@ -84,6 +81,7 @@ import SubTitle from '../Elements/SubTitle.vue';
   list-style: none;
 }
 .contact ul i{
+  font-size: 2.5rem;
   color: var(--secondary-color);
 }
 .contact ul li {
@@ -103,8 +101,7 @@ textarea {
   border: 1px solid var(--alternative-color);
   border-radius: .5rem;
   color: var(--alternative-color);
-  box-shadow: var(--box-shadow);
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 
 input:focus,
@@ -121,6 +118,6 @@ select::placeholder {
 
 .form .btn {
   padding: 1.25rem 2rem;
-  margin: 1rem 0 0 0;
+  margin-top: 1rem;
 }
 </style>
