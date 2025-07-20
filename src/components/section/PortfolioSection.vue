@@ -1,4 +1,5 @@
 <script setup>
+import BaseImage from '../Elements/BaseImage.vue';
 import BaseParagraph from '../Elements/BaseParagraph.vue';
 import BaseTitle from '../Elements/BaseTitle.vue';
 import SubTitle from '../Elements/SubTitle.vue';
@@ -34,7 +35,7 @@ const projects = [
       <div class="medium-2 large-3 gap-2">
         <div v-for="project in projects" :key="project.title" class="card">
 
-          <img :src="project.image" :alt="project.title" />
+          <BaseImage :image="project.image" :alt="project.title" />
 
           <div class="p-2">
             <SubTitle>{{ project.title }}</SubTitle>
@@ -52,20 +53,18 @@ const projects = [
 
 <style scoped>
 .projects {
-  background-color: #1F2833;
-  color: #C5C6C7;
   padding: 3.75rem 0;
 }
 
 .card {
   background-color: rgb(from var(--primary-color)r g b / 70%);
   border-radius: .75rem;
-  box-shadow: 0 4px 10px rgba(172, 239, 234, 0.3);
+  box-shadow: 0 .25rem 10px rgb(from var(--alternative-color) r g b / 30%);
   transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-.25rem);
 }
 
 .card img {
@@ -74,30 +73,30 @@ const projects = [
   object-fit: cover;
   border-radius: .75rem;
 }
-
 .card p {
-  margin: .75rem 0 1rem 0;
+  margin: .75rem 0 1.25rem 0;
 }
-
 .card .btn {
   padding: .5rem;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-weight: 600;
+  border: 2px solid var(--secondary-color);
 }
 
-.card .btn:hover {
-  background-color: #45d5cb;
+
+.projects .btn:hover {
+  background-color: transparent;
+  color: var(--secondary-color);
 }
 
-.btn.outline {
+.projects .btn.outline {
   background: transparent;
-  color: #66FCF1;
-  border: 1px solid #66FCF1;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 
-.btn.outline:hover {
-  background-color: #66FCF1;
-  color: #1F2833;
+.projects .btn.outline:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 </style>
