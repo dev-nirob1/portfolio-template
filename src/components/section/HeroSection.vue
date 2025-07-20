@@ -1,10 +1,14 @@
+<script setup>
+import BaseParagraph from '../Elements/BaseParagraph.vue';
+import HeroTitle from './../Elements/HeroTitle.vue'
+</script>
 <template>
   <section class="hero">
     <div class="overlay">
       <div class="content">
-        <h1>Hi, I'm <span class="accent">MD AL HASAN NIROB</span></h1>
-        <p class="tagline">Front-End Developer specializing in React & Vue</p>
-        <div class="buttons">
+        <HeroTitle>Hi, I'm <span class="highlight">MD AL HASAN NIROB</span></HeroTitle>
+        <BaseParagraph>Front-End Developer specializing in React & Vue</BaseParagraph>
+        <div class="flex justify-center gap-1 flex-wrap mt-2">
           <a href="#contact" class="btn">Contact Me</a>
           <a href="#" class="btn outline" download>Download CV</a>
         </div>
@@ -15,19 +19,19 @@
 
 <style scoped>
 .hero {
-  background: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1650&q=80') 
-    center/cover no-repeat fixed;
+  background: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1650&q=80') center/cover no-repeat fixed;
   min-height: 100vh;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #C5C6C7;
+  color: var(--alternative-color);
   padding: 5rem 0;
 }
 
-.overlay {
-  background: rgba(31, 40, 51, 0.85); /* #1F2833 with transparency */
+.hero .overlay {
+  background: rgb(from var(--primary-color) r g b / 85%);
   width: 100%;
   height: 100%;
   display: flex;
@@ -36,52 +40,41 @@
   padding: 2rem;
 }
 
-.content {
-  text-align: center;
+.hero .content {
   max-width: 700px;
 }
 
-.accent {
-  color: #66FCF1;
+.hero .highlight {
+  color: var(--secondary-color);
 }
 
-.tagline {
+.hero p {
   font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #C5C6C7;
 }
 
-.buttons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.btn {
+.hero .btn {
   padding: 0.75rem 1.5rem;
-  background-color: #66FCF1;
-  color: #1F2833;
-  border: none;
-  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: .25rem;
   font-weight: bold;
   transition: background 0.3s ease;
-  text-decoration: none;
+  border: 2px solid var(--secondary-color);
 }
 
-.btn:hover {
-  background-color: #45d5cb;
+.hero .btn:hover {
+  background-color: transparent;
+  color: var(--secondary-color);
 }
 
-.btn.outline {
+.hero .btn.outline {
   background: transparent;
-  color: #66FCF1;
-  border: 2px solid #66FCF1;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 
-.btn.outline:hover {
-  background-color: #66FCF1;
-  color: #1F2833;
+.hero .btn.outline:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 </style>
